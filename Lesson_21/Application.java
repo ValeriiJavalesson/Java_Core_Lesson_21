@@ -11,8 +11,9 @@ public class Application {
         Plant p1 = new Plant("Green", 120, "Poaceae");
         File file = new File("annotations.txt");
         List<String> annotationValuesList = getAnnotationValues(p1.getClass());
-
+        System.out.println("Записуємо список полів з анотацією в файл: " + file.getName());
         writeAnnotationListItemsToFile(annotationValuesList, file);
+        System.out.println("Читаємо список полів з анотацією з файлу: " + file.getName());
         readAnnotationListItemsFromFile(file);
 
     }
